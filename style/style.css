@@ -1,0 +1,204 @@
+:root {
+  --fons: #f6f7fb;
+  --targeta: #ffffff;
+  --accent: #0a66c2;
+  --suau: #6b7280;
+  --linia: #e6e9ef;
+  --ample-maxim: 900px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fons: #0f1117;
+    --targeta: #1b1e26;
+    --accent: #4ea8ff;
+    --suau: #a1a1aa;
+    --linia: #2a2e39;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+  background: var(--fons);
+  margin: 24px;
+  color: #f0f0f0;
+}
+
+#contenidor {
+  max-width: var(--ample-maxim);
+  margin: 0 auto;
+}
+
+#targeta-cv {
+  background: var(--targeta);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  overflow: hidden;
+}
+
+#capcalera {
+  display: flex;
+  gap: 20px;
+  padding: 28px;
+  border-bottom: 1px solid var(--linia);
+  align-items: center;
+}
+
+#foto-perfil {
+  width: 96px;
+  height: 96px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid var(--accent);
+}
+
+#info-personal {
+  flex: 1;
+}
+
+#nom {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.2px;
+}
+
+#rol {
+  margin: 6px 0 0;
+  color: var(--suau);
+}
+
+#contacte {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.etiqueta-contacte {
+  background: #f3f6fb;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 13px;
+  color: var(--suau);
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .etiqueta-contacte {
+    background: #2a2e39;
+    color: #c2c2c2;
+  }
+}
+
+#cos-pagina {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 28px;
+  padding: 28px;
+}
+
+#contingut-principal {
+  min-width: 0;
+}
+
+section {
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 15px;
+  margin: 0 0 12px;
+  color: #0f1724;
+}
+
+@media (prefers-color-scheme: dark) {
+  h2 {
+    color: #e5e5e5;
+  }
+}
+
+.entrada {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--linia);
+  background: var(--targeta);
+  margin-bottom: 10px;
+}
+
+.entrada .detalls {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--suau);
+  margin-bottom: 6px;
+}
+
+.entrada p {
+  margin: 0;
+  color: #f0f0f0;
+}
+
+#costat .caixa {
+  background: var(--targeta);
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--linia);
+  margin-bottom: 12px;
+}
+
+.idioma {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.nivell {
+  font-size: 13px;
+  color: var(--suau);
+}
+
+#peu {
+  padding: 18px;
+  border-top: 1px solid var(--linia);
+  text-align: right;
+  color: var(--suau);
+  font-size: 13px;
+}
+
+/* Adaptació mòbil */
+@media (max-width: 880px) {
+  #cos-pagina {
+    grid-template-columns: 1fr;
+  }
+  #costat {
+    order: -1;
+  }
+  #capcalera {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Impressió */
+@media print {
+  body {
+    background: white;
+    margin: 0;
+  }
+  #contenidor {
+    box-shadow: none;
+  }
+  #peu {
+    display: none;
+  }
+}
