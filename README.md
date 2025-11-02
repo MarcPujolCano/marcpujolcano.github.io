@@ -30,7 +30,7 @@ Totes les seccions tenen títols clars (`<h2>`) i textos curts per facilitar la 
 ---
 
 ## Disseny visual
-He triat un disseny net i modern, amb colors suaus i un toc blau com a color principal.  
+He triat un disseny net, amb colors suaus i un toc blau com a color principal.  
 La tipografia utilitzada és **Inter**, perquè és fàcil de llegir tant en pantalla com en mòbil.  
 Cada secció està dins d’una targeta blanca amb cantonades arrodonides i una ombra suau, per separar els blocs de contingut i millorar la llegibilitat.  
 
